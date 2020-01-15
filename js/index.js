@@ -43,7 +43,7 @@ redBtn.addEventListener('mousedown', () => {
     body.style.backgroundColor = 'dodgerblue'
 })
 redBtn.addEventListener('mouseup', () => {
-    body.style.backgroundColor = 'purple'
+    body.style.backgroundColor = 'forestgreen'
 })
 
 //6 - Mountain Button - click red
@@ -75,10 +75,11 @@ const lawn = document.querySelectorAll('p').forEach((p) => {
     })
 })
 
-//10 click - body
-body.addEventListener('click', () => {
-    body.style.backgroundColor = 'lightgreen'
-})
+//10 NavBar scroll to blue
+const navBar = document.querySelector('nav');
+ window.addEventListener('scroll', () => {
+     navBar.style.backgroundColor = 'lightblue';
+    })
 
 // click lets go
 const bodyText = document.querySelector('.text-content1');
@@ -97,7 +98,7 @@ stopNav.addEventListener('click', (event) => {
 //Stretch shaky shaky
 document.querySelectorAll('div').forEach(el => {
     el.addEventListener('mouseenter', () => {
-        TweenMax.to(el, 0.1, {x:"+=20", yoyo:true, repeat:10});
-        TweenMax.to(el, 0.1, {x:"-=20", yoyo:true, repeat:10});
+        TweenMax.to(el, 0.5, {x:"+=20", yoyo:true, repeat:5});
+        TweenMax.to(el, 0.5, {x:"-=20", yoyo:true, repeat:5});
     })
 })
